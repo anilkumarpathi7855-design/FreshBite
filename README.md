@@ -291,6 +291,8 @@ The project can be further extended with a backend, database, authentication, on
 ---
 
 ## 15. Author
+Anil
+
 
 **FreshBite - Online Food Ordering System**
 
