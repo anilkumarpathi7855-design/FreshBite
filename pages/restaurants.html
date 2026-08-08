@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Fresh Bite - Restaurants</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Restaurant CSS -->
+    <link rel="stylesheet" href="css/restaurants.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">
+                <i class="fa-solid fa-utensils"></i>
+            </span>
+
+            <span>
+                Fresh <b>Bite</b>
+            </span>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a
+                href="restaurants.html"
+                class="active"
+            >
+                Restaurants
+            </a>
+
+            <a href="menu.html">
+                Menu
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- NAV ACTIONS -->
+
+        <div class="nav-actions">
+
+
+            <!-- SEARCH -->
+
+            <button
+                class="nav-icon"
+                id="navSearchBtn"
+                aria-label="Search"
+            >
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+
+            <!-- WISHLIST -->
+
+            <a
+                href="wishlist.html"
+                class="nav-icon"
+                aria-label="Wishlist"
+            >
+
+                <i class="fa-regular fa-heart"></i>
+
+            </a>
+
+
+            <!-- CART -->
+
+            <a
+                href="cart.html"
+                class="nav-icon cart-icon"
+                aria-label="Cart"
+            >
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span
+                    class="cart-count"
+                    id="cartCount"
+                >
+                    0
+                </span>
+
+            </a>
+
+
+            <!-- USER -->
+
+            <a
+                href="login.html"
+                class="nav-user"
+            >
+
+                <i class="fa-regular fa-user"></i>
+
+                <span>
+                    Login
+                </span>
+
+            </a>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                aria-label="Open menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- MOBILE NAVIGATION -->
+
+    <div
+        class="mobile-nav"
+        id="mobileNav"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a
+            href="restaurants.html"
+            class="active"
+        >
+            Restaurants
+        </a>
+
+        <a href="menu.html">
+            Menu
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="login.html">
+            Login / Register
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     RESTAURANT HERO
+===================================================== -->
+
+<main class="restaurants-page">
+
+
+<section class="restaurant-hero">
+
+    <div class="container">
+
+        <div class="restaurant-hero-content">
+
+
+            <div class="section-label">
+                <i class="fa-solid fa-store"></i>
+                Discover Delicious Places
+            </div>
+
+
+            <h1>
+
+                Find Your
+                <span>Favourite</span>
+                Restaurant
+
+            </h1>
+
+
+            <p>
+
+                Explore the best restaurants around you,
+                discover delicious cuisines and order your
+                favourite food from Fresh Bite.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SEARCH
+===================================================== -->
+
+<section class="restaurant-search-section">
+
+    <div class="container">
+
+        <div class="restaurant-search-wrapper">
+
+
+            <div class="restaurant-search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="restaurantSearch"
+                    placeholder="Search restaurants or cuisines..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <button
+                class="restaurant-search-btn"
+                id="restaurantSearchBtn"
+            >
+
+                <i class="fa-solid fa-search"></i>
+
+                Search
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RESTAURANTS
+===================================================== -->
+
+<section class="restaurant-section">
+
+    <div class="container">
+
+
+        <!-- MOBILE FILTER BUTTON -->
+
+        <button
+            class="mobile-filter-btn"
+            id="mobileFilterBtn"
+        >
+
+            <i class="fa-solid fa-sliders"></i>
+
+            Filters
+
+        </button>
+
+
+        <!-- FILTER OVERLAY -->
+
+        <div
+            class="filter-overlay"
+            id="filterOverlay"
+        ></div>
+
+
+
+        <div class="restaurant-layout">
+
+
+            <!-- =================================================
+                 FILTER SIDEBAR
+            ================================================== -->
+
+            <aside
+                class="restaurant-filters"
+                id="restaurantFilters"
+            >
+
+
+                <div class="filter-header">
+
+                    <h3>
+                        Filters
+                    </h3>
+
+                    <button
+                        class="clear-filters"
+                        id="clearFilters"
+                    >
+                        Clear All
+                    </button>
+
+                </div>
+
+
+
+                <!-- CUISINE -->
+
+                <div class="filter-group">
+
+                    <h4>
+                        Cuisine
+                    </h4>
+
+
+                    <div class="filter-option">
+
+                        <div class="filter-option-left">
+
+                            <input
+                                type="checkbox"
+                                id="indian"
+                                class="cuisine-filter"
+                                value="Indian"
+                            >
+
+                            <label for="indian">
+                                Indian
+                            </label>
+
+                        </div>
+
+                        <span class="filter-count">
+                            12
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="filter-option">
+
+                        <div class="filter-option-left">
+
+                            <input
+                                type="checkbox"
+                                id="chinese"
+                                class="cuisine-filter"
+                                value="Chinese"
+                            >
+
+                            <label for="chinese">
+                                Chinese
+                            </label>
+
+                        </div>
+
+                        <span class="filter-count">
+                            8
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="filter-option">
+
+                        <div class="filter-option-left">
+
+                            <input
+                                type="checkbox"
+                                id="italian"
+                                class="cuisine-filter"
+                                value="Italian"
+                            >
+
+                            <label for="italian">
+                                Italian
+                            </label>
+
+                        </div>
+
+                        <span class="filter-count">
+                            7
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="filter-option">
+
+                        <div class="filter-option-left">
+
+                            <input
+                                type="checkbox"
+                                id="mexican"
+                                class="cuisine-filter"
+                                value="Mexican"
+                            >
+
+                            <label for="mexican">
+                                Mexican
+                            </label>
+
+                        </div>
+
+                        <span class="filter-count">
+                            5
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="filter-option">
+
+                        <div class="filter-option-left">
+
+                            <input
+                                type="checkbox"
+                                id="continental"
+                                class="cuisine-filter"
+                                value="Continental"
+                            >
+
+                            <label for="continental">
+                                Continental
+                            </label>
+
+                        </div>
+
+                        <span class="filter-count">
+                            6
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RATING -->
+
+                <div class="filter-group">
+
+                    <h4>
+                        Rating
+                    </h4>
+
+
+                    <div class="rating-filter">
+
+                        <input
+                            type="radio"
+                            name="rating"
+                            id="rating4"
+                            value="4"
+                            class="rating-input"
+                        >
+
+                        <label for="rating4">
+                            4+
+                        </label>
+
+
+                        <input
+                            type="radio"
+                            name="rating"
+                            id="rating3"
+                            value="3"
+                            class="rating-input"
+                        >
+
+                        <label for="rating3">
+                            3+
+                        </label>
+
+
+                        <input
+                            type="radio"
+                            name="rating"
+                            id="rating2"
+                            value="2"
+                            class="rating-input"
+                        >
+
+                        <label for="rating2">
+                            2+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRICE -->
+
+                <div class="filter-group">
+
+                    <h4>
+                        Price Range
+                    </h4>
+
+
+                    <div class="price-options">
+
+
+                        <button
+                            class="price-option"
+                            data-price="low"
+                        >
+                            ₹
+                        </button>
+
+
+                        <button
+                            class="price-option"
+                            data-price="medium"
+                        >
+                            ₹₹
+                        </button>
+
+
+                        <button
+                            class="price-option"
+                            data-price="high"
+                        >
+                            ₹₹₹
+                        </button>
+
+
+                        <button
+                            class="price-option"
+                            data-price="premium"
+                        >
+                            ₹₹₹₹
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+
+            <!-- =================================================
+                 RESTAURANT CONTENT
+            ================================================== -->
+
+            <div class="restaurant-content">
+
+
+                <!-- HEADER -->
+
+                <div class="restaurant-content-header">
+
+                    <div>
+
+                        <h2>
+                            Popular Restaurants
+                        </h2>
+
+                        <p id="restaurantCount">
+                            9 restaurants available
+                        </p>
+
+                    </div>
+
+
+                    <!-- SORT -->
+
+                    <div class="restaurant-sort">
+
+                        <label for="sortRestaurants">
+                            Sort by:
+                        </label>
+
+                        <select id="sortRestaurants">
+
+                            <option value="popular">
+                                Popular
+                            </option>
+
+                            <option value="rating">
+                                Highest Rated
+                            </option>
+
+                            <option value="delivery">
+                                Fastest Delivery
+                            </option>
+
+                            <option value="price-low">
+                                Price: Low to High
+                            </option>
+
+                            <option value="price-high">
+                                Price: High to Low
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     RESTAURANT GRID
+                ================================================== -->
+
+                <div
+                    class="restaurant-grid"
+                    id="restaurantGrid"
+                >
+
+
+
+                    <!-- RESTAURANT 1 -->
+
+                    <article
+                        class="restaurant-card"
+                        data-name="Spice Garden"
+                        data-cuisine="Indian"
+                        data-rating="4.8"
+                        data-price="medium"
+                        data-delivery="25"
+                    >
+
+                        <div class="restaurant-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
+                                alt="Spice Garden restaurant"
+                            >
+
+                            <span class="restaurant-badge">
+                                Popular
+                            </span>
+
+                            <span class="restaurant-discount">
+                                20% OFF
+                            </span>
+
+                            <button
+                                class="restaurant-favorite wishlist-btn"
+                                aria-label="Add to wishlist"
+                            >
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="restaurant-card-content">
+
+
+                            <div class="restaurant-top-row">
+
+                                <h3>
+                                    Spice Garden
+                                </h3>
+
+                                <span class="restaurant-rating">
+
+                                    <i class="fa-solid fa-star"></i>
+
+                                    4.8
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="restaurant-cuisine">
+
+                                Indian • North Indian
+
+                            </div>
+
+
+                            <p class="restaurant-description">
+
+                                Authentic Indian flavours,
+                                aromatic biryanis and delicious
+                                traditional dishes.
+
+                            </p>
+
+
+                            <div class="restaurant-meta">
+
+                                <span class="restaurant-meta-item">
+
+                                    <i class="fa-regular fa-clock"></i>
+
+                                    25 min
+
+                                </span>
+
+
+                                <span class="restaurant-meta-item">
+
+                                    <i class="fa-solid fa-motorcycle"></i>
+
+                                    Free Delivery
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="restaurant-card-footer">
+
+                                <span class="restaurant-price">
+                                    ₹₹
+                                </span>
+
+
+                                <a
+                                    href="menu.html?restaurant=spice-garden"
+                                    class="menu-btn"
+                                >
+
+                                    View Menu
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- RESTAURANT 2 -->
+
+                    <article
+                        class="restaurant-card"
+                        data-name="Dragon Bowl"
+                        data-cuisine="Chinese"
+                        data-rating="4.6"
+                        data-price="medium"
+                        data-delivery="30"
+                    >
+
+                        <div class="restaurant-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80"
+                                alt="Dragon Bowl restaurant"
+                            >
+
+                            <span class="restaurant-badge">
+                                Top Rated
+                            </span>
+
+                            <button
+                                class="restaurant-favorite wishlist-btn"
+                                aria-label="Add to wishlist"
+                            >
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="restaurant-card-content">
+
+                            <div class="restaurant-top-row">
+
+                                <h3>
+                                    Dragon Bowl
+                                </h3>
+
+                                <span class="restaurant-rating">
+
+                                    <i class="fa-solid fa-star"></i>
+
+                                    4.6
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="restaurant-cuisine">
+
+                                Chinese • Asian
+
+                            </div>
+
+
+                            <p class="restaurant-description">
+
+                                Delicious Asian flavours,
+                                noodles, fried rice and
+                                authentic Chinese recipes.
+
+                            </p>
+
+
+                            <div class="restaurant-meta">
+
+                                <span class="restaurant-meta-item">
+
+                                    <i class="fa-regular fa-clock"></i>
+
+                                    30 min
+
+                                </span>
+
+
+                                <span class="restaurant-meta-item">
+
+                                    <i class="fa-solid fa-motorcycle"></i>
+
+                                    ₹40 Delivery
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="restaurant-card-footer">
+
+                                <span class="restaurant-price">
+                                    ₹₹
+                                </span>
+
+
+                                <a
+                                    href="menu.html?restaurant=dragon-bowl"
+                                    class="menu-btn"
+                                >
+
+                                    View Menu
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- RESTAURANT 3 -->
+
+                    <article
+                        class="restaurant-card"
+                        data-name="Bella Italia"
+                        data-cuisine="Italian"
+                        data-rating="4.7"
+                        data-price="high"
+                        data-delivery="35"
+                    >
+
+                        <div class="restaurant-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80"
+                                alt="Bella Italia restaurant"
+                            >
+
+                            <span class="restaurant-badge">
+                                New
+                            </span>
+
+                            <button
+                                class="restaurant-favorite wishlist-btn"
+                                aria-label="Add to wishlist"
+                            >
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="restaurant-card-content">
+
+                            <div class="restaurant-top-row">
+
+                                <h3>
+                                    Bella Italia
+                                </h3>
+
+                                <span class="restaurant-rating">
+
+                                    <i class="fa-solid fa-star"></i>
+
+                                    4.7
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="restaurant-cuisine">
+
+                                Italian • Pizza • Pasta
+
+                            </div>
+
+
+                            <p class="restaurant-description">
+
+                                Freshly baked pizzas,
+                                creamy pasta and classic
+                                Italian favourites.
+
+                            </p>
+
+
+                            <div class="restaurant-meta">
+
+                                <span class="restaurant-meta-item">
+
+                                    <i class="fa-regular fa-clock"></i>
+
+                                    35 min
+
+                                </span>
+
+
+                                <span class="restaurant-meta-item">
+
+                                    <i class="fa-solid fa-motorcycle"></i>
+
+                                    ₹30 Delivery
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="restaurant-card-footer">
+
+                                <span class="restaurant-price">
+                                    ₹₹₹
+                                </span>
+
+
+                                <a
+                                    href="menu.html?restaurant=bella-italia"
+                                    class="menu-btn"
+                                >
+
+                                    View Menu
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- RESTAURANT 4 -->
+
+                    <article
+                        class="restaurant-card"
+                        data-name="Taco Fiesta"
+                        data-cuisine="Mexican"
+                        data-rating="4.5"
+                        data-price="low"
+                        data-delivery="28"
+                    >
+
+                        <div class="restaurant-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=800&q=80"
+                                alt="Taco Fiesta restaurant"
+                            >
+
+                            <span class="restaurant-discount">
+                                15% OFF
+                            </span>
+
+                            <button
+                                class="restaurant-favorite wishlist-btn"
+                                aria-label="Add to wishlist"
+                            >
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="restaurant-card-content">
+
+                            <div class="restaurant-top-row">
+
+                                <h3>
+                                    Taco Fiesta
+                                </h3>
+
+                                <span class="restaurant-rating">
+
+                                    <i class="fa-solid fa-star"></i>
+
+                                    4.5
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="restaurant-cuisine">
+
+                                Mexican • Fast Food
+
+                            </div>
+
+
+                            <p class="restaurant-description">
+
+                                Spicy tacos, loaded burritos
+                                and delicious Mexican
+                                street food.
+
+                            </p>
+
+
+                            <div class="restaurant-meta">
+
+                                <span class="restaurant-meta-item">
+
+                                    <i class="fa-regular fa-clock"></i>
+
+                                    28 min
+
+                                </span>
+
+
+                                <span class="restaurant-meta-item">
+
+                                    <i class="fa-solid fa-motorcycle"></i>
+
+                                    ₹25 Delivery
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="restaurant-card-footer">
+
+                                <span class="restaurant-price">
+                                    ₹
+                                </span>
+
+
+                                <a
+                                    href="menu.html?restaurant=taco-fiesta"
+                                    class="menu-btn"
+                                >
+
+                                    View Menu
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- RESTAURANT 5 -->
+
+                    <article
+                        class="restaurant-card"
+                        data-name="Green Leaf"
+                        data-cuisine="Continental"
+                        data-rating="4.4"
+                        data-price="medium"
+                        data-delivery="22"
+                    >
+
+                        <div class="restaurant-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=800&q=80"
+                                alt="Green Leaf restaurant"
+                            >
+
+                            <span class="restaurant-badge">
+                                Healthy
+                            </span>
+
+                            <button
+                                class="restaurant-favorite wishlist-btn"
+                                aria-label="Add to wishlist"
+                            >
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="restaurant-card-content">
+
+                            <div class="restaurant-top-row">
+
+                                <h3>
+                                    Green Leaf
+                                </h3>
+
+                                <span class="restaurant-rating">
+
+                                    <i class="fa-solid fa-star"></i>
+
+                                    4.4
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="restaurant-cuisine">
+
+                                Continental • Healthy
+
+                            </div>
+
+
+                            <p class="restaurant-description">
+
+                                Fresh salads, healthy bowls
+                                and nutritious meals made
+                                with fresh ingredients.
+
+                            </p>
+
+
+                            <div class="restaurant-meta">
+
+                                <span class="restaurant-meta-item">
+
+                                    <i class="fa-regular fa-clock"></i>
+
+                                    22 min
+
+                                </span>
+
+
+                                <span class="restaurant-meta-item">
+
+                                    <i class="fa-solid fa-motorcycle"></i>
+
+                                    Free Delivery
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="restaurant-card-footer">
+
+                                <span class="restaurant-price">
+                                    ₹₹
+                                </span>
+
+
+                                <a
+                                    href="menu.html?restaurant=green-leaf"
+                                    class="menu-btn"
+                                >
+
+                                    View Menu
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- RESTAURANT 6 -->
+
+                    <article
+                        class="restaurant-card"
+                        data-name="Biryani House"
+                        data-cuisine="Indian"
+                        data-rating="4.9"
+                        data-price="medium"
+                        data-delivery="27"
+                    >
+
+                        <div class="restaurant-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
+                                alt="Biryani House restaurant"
+                            >
+
+                            <span class="restaurant-badge">
+                                Best Seller
+                            </span>
+
+                            <span class="restaurant-discount">
+                                25% OFF
+                            </span>
+
+                            <button
+                                class="restaurant-favorite wishlist-btn"
+                                aria-label="Add to wishlist"
+                            >
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="restaurant-card-content">
+
+                            <div class="restaurant-top-row">
+
+                                <h3>
+                                    Biryani House
+                                </h3>
+
+                                <span class="restaurant-rating">
+
+                                    <i class="fa-solid fa-star"></i>
+
+                                    4.9
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="restaurant-cuisine">
+
+                                Indian • Biryani • Mughlai
+
+                            </div>
+
+
+                            <p class="restaurant-description">
+
+                                Aromatic biryanis, rich
+                                Mughlai dishes and authentic
+                                Indian flavours.
+
+                            </p>
+
+
+                            <div class="restaurant-meta">
+
+                                <span class="restaurant-meta-item">
+
+                                    <i class="fa-regular fa-clock"></i>
+
+                                    27 min
+
+                                </span>
+
+
+                                <span class="restaurant-meta-item">
+
+                                    <i class="fa-solid fa-motorcycle"></i>
+
+                                    Free Delivery
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="restaurant-card-footer">
+
+                                <span class="restaurant-price">
+                                    ₹₹
+                                </span>
+
+
+                                <a
+                                    href="menu.html?restaurant=biryani-house"
+                                    class="menu-btn"
+                                >
+
+                                    View Menu
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- RESTAURANT 7 -->
+
+                    <article
+                        class="restaurant-card"
+                        data-name="Burger Hub"
+                        data-cuisine="Continental"
+                        data-rating="4.3"
+                        data-price="low"
+                        data-delivery="20"
+                    >
+
+                        <div class="restaurant-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&q=80"
+                                alt="Burger Hub restaurant"
+                            >
+
+                            <button
+                                class="restaurant-favorite wishlist-btn"
+                                aria-label="Add to wishlist"
+                            >
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="restaurant-card-content">
+
+                            <div class="restaurant-top-row">
+
+                                <h3>
+                                    Burger Hub
+                                </h3>
+
+                                <span class="restaurant-rating">
+
+                                    <i class="fa-solid fa-star"></i>
+
+                                    4.3
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="restaurant-cuisine">
+
+                                Burgers • Fast Food
+
+                            </div>
+
+
+                            <p class="restaurant-description">
+
+                                Juicy burgers, crispy fries
+                                and delicious fast food
+                                favourites.
+
+                            </p>
+
+
+                            <div class="restaurant-meta">
+
+                                <span class="restaurant-meta-item">
+
+                                    <i class="fa-regular fa-clock"></i>
+
+                                    20 min
+
+                                </span>
+
+
+                                <span class="restaurant-meta-item">
+
+                                    <i class="fa-solid fa-motorcycle"></i>
+
+                                    ₹20 Delivery
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="restaurant-card-footer">
+
+                                <span class="restaurant-price">
+                                    ₹
+                                </span>
+
+
+                                <a
+                                    href="menu.html?restaurant=burger-hub"
+                                    class="menu-btn"
+                                >
+
+                                    View Menu
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- RESTAURANT 8 -->
+
+                    <article
+                        class="restaurant-card"
+                        data-name="South Spice"
+                        data-cuisine="Indian"
+                        data-rating="4.6"
+                        data-price="low"
+                        data-delivery="24"
+                    >
+
+                        <div class="restaurant-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80"
+                                alt="South Spice restaurant"
+                            >
+
+                            <span class="restaurant-badge">
+                                Trending
+                            </span>
+
+                            <button
+                                class="restaurant-favorite wishlist-btn"
+                                aria-label="Add to wishlist"
+                            >
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="restaurant-card-content">
+
+                            <div class="restaurant-top-row">
+
+                                <h3>
+                                    South Spice
+                                </h3>
+
+                                <span class="restaurant-rating">
+
+                                    <i class="fa-solid fa-star"></i>
+
+                                    4.6
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="restaurant-cuisine">
+
+                                South Indian • Tiffins
+
+                            </div>
+
+
+                            <p class="restaurant-description">
+
+                                Crispy dosas, fluffy idlis,
+                                vadas and authentic South
+                                Indian meals.
+
+                            </p>
+
+
+                            <div class="restaurant-meta">
+
+                                <span class="restaurant-meta-item">
+
+                                    <i class="fa-regular fa-clock"></i>
+
+                                    24 min
+
+                                </span>
+
+
+                                <span class="restaurant-meta-item">
+
+                                    <i class="fa-solid fa-motorcycle"></i>
+
+                                    ₹20 Delivery
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="restaurant-card-footer">
+
+                                <span class="restaurant-price">
+                                    ₹
+                                </span>
+
+
+                                <a
+                                    href="menu.html?restaurant=south-spice"
+                                    class="menu-btn"
+                                >
+
+                                    View Menu
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- RESTAURANT 9 -->
+
+                    <article
+                        class="restaurant-card"
+                        data-name="Sweet Treats"
+                        data-cuisine="Continental"
+                        data-rating="4.5"
+                        data-price="medium"
+                        data-delivery="26"
+                    >
+
+                        <div class="restaurant-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80"
+                                alt="Sweet Treats restaurant"
+                            >
+
+                            <span class="restaurant-badge">
+                                Dessert
+                            </span>
+
+                            <span class="restaurant-discount">
+                                10% OFF
+                            </span>
+
+                            <button
+                                class="restaurant-favorite wishlist-btn"
+                                aria-label="Add to wishlist"
+                            >
+
+                                <i class="fa-regular fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="restaurant-card-content">
+
+                            <div class="restaurant-top-row">
+
+                                <h3>
+                                    Sweet Treats
+                                </h3>
+
+                                <span class="restaurant-rating">
+
+                                    <i class="fa-solid fa-star"></i>
+
+                                    4.5
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="restaurant-cuisine">
+
+                                Desserts • Bakery
+
+                            </div>
+
+
+                            <p class="restaurant-description">
+
+                                Delicious cakes, pastries,
+                                donuts and sweet treats
+                                for every occasion.
+
+                            </p>
+
+
+                            <div class="restaurant-meta">
+
+                                <span class="restaurant-meta-item">
+
+                                    <i class="fa-regular fa-clock"></i>
+
+                                    26 min
+
+                                </span>
+
+
+                                <span class="restaurant-meta-item">
+
+                                    <i class="fa-solid fa-motorcycle"></i>
+
+                                    ₹30 Delivery
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="restaurant-card-footer">
+
+                                <span class="restaurant-price">
+                                    ₹₹
+                                </span>
+
+
+                                <a
+                                    href="menu.html?restaurant=sweet-treats"
+                                    class="menu-btn"
+                                >
+
+                                    View Menu
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     NO RESULTS
+                ================================================== -->
+
+                <div
+                    class="no-restaurant-results"
+                    id="noRestaurantResults"
+                >
+
+                    <div class="no-results-icon">
+
+                        <i class="fa-solid fa-store-slash"></i>
+
+                    </div>
+
+
+                    <h3>
+                        No Restaurants Found
+                    </h3>
+
+
+                    <p>
+                        Try changing your search or filters.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="logo"
+                >
+
+                    <span class="logo-icon">
+                        <i class="fa-solid fa-utensils"></i>
+                    </span>
+
+                    <span>
+                        Fresh <b>Bite</b>
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    Delicious food delivered
+                    fresh to your doorstep.
+
+                </p>
+
+
+                <div class="social-links">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="restaurants.html">
+                    Restaurants
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+            </div>
+
+
+
+            <!-- SUPPORT -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Support
+                </h4>
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    FAQs
+                </a>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Contact
+                </h4>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Hyderabad, India
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 98765 43210
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    hello@freshbite.com
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Fresh Bite. All Rights Reserved.
+            </p>
+
+            <p>
+                Made with
+                <i class="fa-solid fa-heart"></i>
+                for food lovers.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="js/script.js"></script>
+
+<script src="js/restaurants.js"></script>
+
+
+</body>
+
+</html>

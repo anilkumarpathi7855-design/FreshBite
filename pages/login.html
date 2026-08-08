@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Fresh Bite - Login</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <!-- =================================================
+         PAGE
+    ================================================== -->
+
+    <main class="auth-page">
+
+        <!-- LEFT SIDE -->
+        <section class="auth-left">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+
+                <span>Fresh Bite</span>
+
+            </div>
+
+
+            <div class="auth-left-content">
+
+                <span class="welcome-label">
+                    <i class="fa-solid fa-heart"></i>
+                    Welcome to Fresh Bite
+                </span>
+
+                <h1>
+                    Delicious food,
+                    <span>delivered fresh.</span>
+                </h1>
+
+                <p>
+                    Order your favorite meals from the best
+                    restaurants around you.
+                </p>
+
+
+                <div class="auth-features">
+
+                    <div class="feature">
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                        <div>
+                            <strong>Fast Delivery</strong>
+                            <small>
+                                Hot & fresh food at your doorstep
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <i class="fa-solid fa-leaf"></i>
+
+                        <div>
+                            <strong>Fresh Ingredients</strong>
+                            <small>
+                                Quality food made with care
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <div>
+                            <strong>Best Restaurants</strong>
+                            <small>
+                                Discover delicious local favorites
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT SIDE -->
+        <section class="auth-right">
+
+            <div class="auth-card">
+
+                <!-- Back -->
+                <a href="index.html" class="back-home">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back to Home
+                </a>
+
+
+                <!-- =================================================
+                     AUTH HEADER
+                ================================================== -->
+
+                <div class="auth-header">
+
+                    <h2 id="authTitle">
+                        Welcome Back!
+                    </h2>
+
+                    <p id="authSubtitle">
+                        Login to continue ordering delicious food.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================================
+                     TABS
+                ================================================== -->
+
+                <div class="auth-tabs">
+
+                    <button
+                        type="button"
+                        class="auth-tab active"
+                        id="loginTab"
+                    >
+                        Login
+                    </button>
+
+                    <button
+                        type="button"
+                        class="auth-tab"
+                        id="registerTab"
+                    >
+                        Register
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     LOGIN FORM
+                ================================================== -->
+
+                <form
+                    id="loginForm"
+                    class="auth-form"
+                >
+
+                    <div class="form-group">
+
+                        <label for="loginEmail">
+                            Email
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="loginEmail"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="loginPassword">
+                            Password
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="loginPassword"
+                            >
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-options">
+
+                        <label class="remember-me">
+
+                            <input
+                                type="checkbox"
+                                id="rememberMe"
+                            >
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+
+                        <button
+                            type="button"
+                            id="forgotPassword"
+                            class="forgot-btn"
+                        >
+                            Forgot Password?
+                        </button>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="auth-submit"
+                    >
+
+                        <span>
+                            Login
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <p
+                        id="loginMessage"
+                        class="form-message"
+                    ></p>
+
+                </form>
+
+
+                <!-- =================================================
+                     REGISTER FORM
+                ================================================== -->
+
+                <form
+                    id="registerForm"
+                    class="auth-form hidden"
+                >
+
+                    <div class="form-group">
+
+                        <label for="registerName">
+                            Full Name
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="registerName"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registerEmail">
+                            Email
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="registerEmail"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registerPhone">
+                            Phone Number
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="registerPhone"
+                                placeholder="Enter phone number"
+                                maxlength="10"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registerPassword">
+                            Password
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="registerPassword"
+                                placeholder="Create a password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="registerPassword"
+                            >
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="Confirm your password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="confirmPassword"
+                            >
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="terms-check">
+
+                        <input
+                            type="checkbox"
+                            id="termsCheck"
+                            required
+                        >
+
+                        <span>
+                            I agree to the Terms & Conditions
+                        </span>
+
+                    </label>
+
+
+                    <button
+                        type="submit"
+                        class="auth-submit"
+                    >
+
+                        <span>
+                            Create Account
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <p
+                        id="registerMessage"
+                        class="form-message"
+                    ></p>
+
+                </form>
+
+
+                <!-- =================================================
+                     DEMO INFORMATION
+                ================================================== -->
+
+                <div class="demo-note">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <span>
+                        This is a frontend demo. Account data is
+                        stored locally in your browser.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="js/login.js"></script>
+
+</body>
+</html>

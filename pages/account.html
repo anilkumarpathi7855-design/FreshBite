@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Fresh Bite - My Account</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="css/account.css">
+
+</head>
+
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="account-header">
+
+    <div class="header-container">
+
+        <a href="index.html"
+           class="logo">
+
+            <span class="logo-icon">
+                <i class="fa-solid fa-utensils"></i>
+            </span>
+
+            <span>Fresh Bite</span>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="restaurants.html">
+                Restaurants
+            </a>
+
+            <a href="menu.html">
+                Menu
+            </a>
+
+            <a href="cart.html"
+               class="cart-link">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                Cart
+
+                <span class="cart-count">
+                    0
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <a href="account.html"
+           class="account-icon">
+
+            <i class="fa-solid fa-user"></i>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="account-page">
+
+    <div class="account-container">
+
+
+        <!-- =================================================
+             PAGE TITLE
+        ================================================== -->
+
+        <div class="page-heading">
+
+            <span>
+                <i class="fa-solid fa-user"></i>
+                My Account
+            </span>
+
+            <h1>
+                Welcome,
+                <span id="welcomeName">
+                    Guest
+                </span>
+            </h1>
+
+            <p>
+                Manage your profile, orders, addresses and wishlist.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             ACCOUNT LAYOUT
+        ================================================== -->
+
+        <div class="account-layout">
+
+
+            <!-- =================================================
+                 SIDEBAR
+            ================================================== -->
+
+            <aside class="account-sidebar">
+
+
+                <div class="profile-mini">
+
+                    <div class="profile-avatar"
+                         id="profileAvatar">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3 id="sidebarName">
+                            Guest User
+                        </h3>
+
+                        <p id="sidebarEmail">
+                            Please login
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <nav class="account-menu">
+
+
+                    <button
+                        class="account-menu-item active"
+                        data-section="profile">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <span>
+                            Profile
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="account-menu-item"
+                        data-section="orders">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+
+                        <span>
+                            Order History
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="account-menu-item"
+                        data-section="addresses">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>
+                            Saved Addresses
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="account-menu-item"
+                        data-section="wishlist">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                        <span>
+                            Wishlist
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="account-menu-item"
+                        data-section="settings">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                        <span>
+                            Settings
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="account-menu-item logout-item"
+                        id="logoutBtn">
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+
+                        <span>
+                            Logout
+                        </span>
+
+                    </button>
+
+
+                </nav>
+
+            </aside>
+
+
+            <!-- =================================================
+                 CONTENT
+            ================================================== -->
+
+            <section class="account-content">
+
+
+                <!-- =================================================
+                     PROFILE
+                ================================================== -->
+
+                <div
+                    class="account-section active"
+                    id="profileSection">
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <h2>
+                                My Profile
+                            </h2>
+
+                            <p>
+                                View and manage your personal information.
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-user-pen"></i>
+
+                    </div>
+
+
+                    <div class="profile-card">
+
+
+                        <div class="large-avatar"
+                             id="largeAvatar">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+
+                        <div class="profile-details">
+
+                            <div class="detail-item">
+
+                                <span>
+                                    Full Name
+                                </span>
+
+                                <strong id="profileName">
+                                    Guest User
+                                </strong>
+
+                            </div>
+
+
+                            <div class="detail-item">
+
+                                <span>
+                                    Email
+                                </span>
+
+                                <strong id="profileEmail">
+                                    Not logged in
+                                </strong>
+
+                            </div>
+
+
+                            <div class="detail-item">
+
+                                <span>
+                                    Phone
+                                </span>
+
+                                <strong id="profilePhone">
+                                    Not available
+                                </strong>
+
+                            </div>
+
+
+                            <div class="detail-item">
+
+                                <span>
+                                    Customer ID
+                                </span>
+
+                                <strong id="profileId">
+                                    —
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     ORDERS
+                ================================================== -->
+
+                <div
+                    class="account-section"
+                    id="ordersSection">
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <h2>
+                                Order History
+                            </h2>
+
+                            <p>
+                                Check your previous Fresh Bite orders.
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+
+                    </div>
+
+
+                    <div id="ordersList"
+                         class="orders-list">
+
+                        <!-- Orders loaded by JavaScript -->
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     ADDRESSES
+                ================================================== -->
+
+                <div
+                    class="account-section"
+                    id="addressesSection">
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <h2>
+                                Saved Addresses
+                            </h2>
+
+                            <p>
+                                Manage your delivery addresses.
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+
+                    <div id="addressesList"
+                         class="addresses-list">
+
+                        <!-- Addresses loaded by JavaScript -->
+
+                    </div>
+
+
+                    <button
+                        class="add-address-btn"
+                        id="addAddressBtn">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Add New Address
+
+                    </button>
+
+
+                    <div
+                        class="address-form"
+                        id="addressForm">
+
+                        <h3>
+                            Add New Address
+                        </h3>
+
+
+                        <input
+                            type="text"
+                            id="addressName"
+                            placeholder="Address Name (Home / Work)">
+
+
+                        <textarea
+                            id="addressText"
+                            placeholder="Enter full delivery address"></textarea>
+
+
+                        <input
+                            type="text"
+                            id="addressCity"
+                            placeholder="City">
+
+
+                        <input
+                            type="text"
+                            id="addressPincode"
+                            placeholder="Pincode"
+                            maxlength="6">
+
+
+                        <div class="address-form-buttons">
+
+                            <button
+                                id="saveAddressBtn"
+                                class="save-btn">
+
+                                Save Address
+
+                            </button>
+
+
+                            <button
+                                id="cancelAddressBtn"
+                                class="cancel-btn">
+
+                                Cancel
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     WISHLIST
+                ================================================== -->
+
+                <div
+                    class="account-section"
+                    id="wishlistSection">
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <h2>
+                                My Wishlist
+                            </h2>
+
+                            <p>
+                                Your favorite food items.
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-heart"></i>
+
+                    </div>
+
+
+                    <div
+                        id="wishlistList"
+                        class="wishlist-list">
+
+                        <!-- Wishlist loaded by JavaScript -->
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     SETTINGS
+                ================================================== -->
+
+                <div
+                    class="account-section"
+                    id="settingsSection">
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <h2>
+                                Settings
+                            </h2>
+
+                            <p>
+                                Manage your account preferences.
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-gear"></i>
+
+                    </div>
+
+
+                    <div class="settings-card">
+
+                        <label class="setting-row">
+
+                            <div>
+
+                                <strong>
+                                    Order Notifications
+                                </strong>
+
+                                <small>
+                                    Receive updates about your orders.
+                                </small>
+
+                            </div>
+
+                            <input
+                                type="checkbox"
+                                id="orderNotifications"
+                                checked>
+
+                        </label>
+
+
+                        <label class="setting-row">
+
+                            <div>
+
+                                <strong>
+                                    Special Offers
+                                </strong>
+
+                                <small>
+                                    Receive Fresh Bite offers and coupons.
+                                </small>
+
+                            </div>
+
+                            <input
+                                type="checkbox"
+                                id="offerNotifications"
+                                checked>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="js/account.js"></script>
+
+</body>
+
+</html>

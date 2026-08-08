@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Fresh Bite - Menu</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Menu CSS -->
+    <link rel="stylesheet" href="css/menu.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">
+                <i class="fa-solid fa-utensils"></i>
+            </span>
+
+            <span>
+                Fresh <b>Bite</b>
+            </span>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="restaurants.html">
+                Restaurants
+            </a>
+
+            <a
+                href="menu.html"
+                class="active"
+            >
+                Menu
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- NAV ACTIONS -->
+
+        <div class="nav-actions">
+
+
+            <a
+                href="wishlist.html"
+                class="nav-icon"
+                aria-label="Wishlist"
+            >
+
+                <i class="fa-regular fa-heart"></i>
+
+            </a>
+
+
+            <a
+                href="cart.html"
+                class="nav-icon cart-icon"
+                aria-label="Cart"
+            >
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span
+                    class="cart-count"
+                    id="cartCount"
+                >
+                    0
+                </span>
+
+            </a>
+
+
+            <a
+                href="login.html"
+                class="nav-user"
+            >
+
+                <i class="fa-regular fa-user"></i>
+
+                <span>
+                    Login
+                </span>
+
+            </a>
+
+
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                aria-label="Open menu"
+            >
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- MOBILE NAV -->
+
+    <div
+        class="mobile-nav"
+        id="mobileNav"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="restaurants.html">
+            Restaurants
+        </a>
+
+        <a
+            href="menu.html"
+            class="active"
+        >
+            Menu
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="login.html">
+            Login / Register
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MENU PAGE
+===================================================== -->
+
+<main class="menu-page">
+
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
+    <section class="menu-hero">
+
+        <div class="container">
+
+            <div class="menu-hero-content">
+
+                <div class="section-label">
+
+                    <i class="fa-solid fa-utensils"></i>
+
+                    Fresh & Delicious
+
+                </div>
+
+
+                <h1>
+
+                    Explore Our
+                    <span>Menu</span>
+
+                </h1>
+
+
+                <p>
+
+                    Discover delicious meals prepared
+                    with fresh ingredients and delivered
+                    straight to your doorstep.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SEARCH
+    ================================================== -->
+
+    <section class="menu-search-section">
+
+        <div class="container">
+
+            <div class="menu-search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="foodSearch"
+                    placeholder="Search for food..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MENU CONTENT
+    ================================================== -->
+
+    <section class="menu-section">
+
+        <div class="container">
+
+
+            <!-- CATEGORY FILTER -->
+
+            <div class="category-filter">
+
+                <button
+                    class="category-btn active"
+                    data-category="all"
+                >
+
+                    <i class="fa-solid fa-border-all"></i>
+
+                    All
+
+                </button>
+
+
+                <button
+                    class="category-btn"
+                    data-category="biryani"
+                >
+
+                    🍛
+
+                    Biryani
+
+                </button>
+
+
+                <button
+                    class="category-btn"
+                    data-category="pizza"
+                >
+
+                    🍕
+
+                    Pizza
+
+                </button>
+
+
+                <button
+                    class="category-btn"
+                    data-category="burger"
+                >
+
+                    🍔
+
+                    Burgers
+
+                </button>
+
+
+                <button
+                    class="category-btn"
+                    data-category="south-indian"
+                >
+
+                    🥞
+
+                    South Indian
+
+                </button>
+
+
+                <button
+                    class="category-btn"
+                    data-category="chinese"
+                >
+
+                    🥡
+
+                    Chinese
+
+                </button>
+
+
+                <button
+                    class="category-btn"
+                    data-category="dessert"
+                >
+
+                    🍰
+
+                    Desserts
+
+                </button>
+
+            </div>
+
+
+
+            <!-- DIET FILTER -->
+
+            <div class="diet-filter">
+
+                <span class="diet-title">
+                    Dietary:
+                </span>
+
+
+                <button
+                    class="diet-btn active"
+                    data-diet="all"
+                >
+                    All
+                </button>
+
+
+                <button
+                    class="diet-btn"
+                    data-diet="veg"
+                >
+
+                    <span class="diet-dot veg"></span>
+
+                    Veg
+
+                </button>
+
+
+                <button
+                    class="diet-btn"
+                    data-diet="non-veg"
+                >
+
+                    <span class="diet-dot nonveg"></span>
+
+                    Non-Veg
+
+                </button>
+
+
+                <button
+                    class="diet-btn"
+                    data-diet="vegan"
+                >
+
+                    <span class="diet-dot vegan"></span>
+
+                    Vegan
+
+                </button>
+
+            </div>
+
+
+
+            <!-- MENU HEADER -->
+
+            <div class="menu-content-header">
+
+                <div>
+
+                    <h2>
+                        Popular Dishes
+                    </h2>
+
+                    <p id="foodCount">
+                        12 Items
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FOOD GRID
+            ================================================== -->
+
+            <div
+                class="food-grid"
+                id="foodGrid"
+            >
+
+
+
+                <!-- FOOD 1 -->
+
+                <article
+                    class="food-card"
+                    data-name="Chicken Biryani"
+                    data-category="biryani"
+                    data-diet="non-veg"
+                >
+
+                    <div class="food-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=700&q=80"
+                            alt="Chicken Biryani"
+                        >
+
+
+                        <span class="food-badge">
+                            Bestseller
+                        </span>
+
+
+                        <button
+                            class="wishlist-btn"
+                            aria-label="Add to wishlist"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card-content">
+
+                        <div class="food-top-row">
+
+                            <h3>
+                                Chicken Biryani
+                            </h3>
+
+                            <span class="food-rating">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                4.9
+
+                            </span>
+
+                        </div>
+
+
+                        <p class="food-description">
+
+                            Aromatic basmati rice cooked
+                            with tender chicken and
+                            traditional spices.
+
+                        </p>
+
+
+                        <div class="food-bottom-row">
+
+                            <strong class="food-price">
+                                ₹249
+                            </strong>
+
+
+                            <button
+                                class="add-cart-btn"
+                                data-id="food-001"
+                                data-name="Chicken Biryani"
+                                data-price="249"
+                            >
+
+                                <i class="fa-solid fa-plus"></i>
+
+                                Add
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FOOD 2 -->
+
+                <article
+                    class="food-card"
+                    data-name="Margherita Pizza"
+                    data-category="pizza"
+                    data-diet="veg"
+                >
+
+                    <div class="food-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=700&q=80"
+                            alt="Margherita Pizza"
+                        >
+
+
+                        <span class="food-badge">
+                            Popular
+                        </span>
+
+
+                        <button
+                            class="wishlist-btn"
+                            aria-label="Add to wishlist"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card-content">
+
+                        <div class="food-top-row">
+
+                            <h3>
+                                Margherita Pizza
+                            </h3>
+
+                            <span class="food-rating">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                4.7
+
+                            </span>
+
+                        </div>
+
+
+                        <p class="food-description">
+
+                            Classic pizza topped with
+                            tomato, mozzarella and fresh
+                            basil.
+
+                        </p>
+
+
+                        <div class="food-bottom-row">
+
+                            <strong class="food-price">
+                                ₹199
+                            </strong>
+
+
+                            <button
+                                class="add-cart-btn"
+                                data-id="food-002"
+                                data-name="Margherita Pizza"
+                                data-price="199"
+                            >
+
+                                <i class="fa-solid fa-plus"></i>
+
+                                Add
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FOOD 3 -->
+
+                <article
+                    class="food-card"
+                    data-name="Classic Chicken Burger"
+                    data-category="burger"
+                    data-diet="non-veg"
+                >
+
+                    <div class="food-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80"
+                            alt="Chicken Burger"
+                        >
+
+
+                        <button
+                            class="wishlist-btn"
+                            aria-label="Add to wishlist"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card-content">
+
+                        <div class="food-top-row">
+
+                            <h3>
+                                Chicken Burger
+                            </h3>
+
+                            <span class="food-rating">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                4.6
+
+                            </span>
+
+                        </div>
+
+
+                        <p class="food-description">
+
+                            Juicy grilled chicken patty
+                            with lettuce, cheese and
+                            special sauce.
+
+                        </p>
+
+
+                        <div class="food-bottom-row">
+
+                            <strong class="food-price">
+                                ₹179
+                            </strong>
+
+
+                            <button
+                                class="add-cart-btn"
+                                data-id="food-003"
+                                data-name="Chicken Burger"
+                                data-price="179"
+                            >
+
+                                <i class="fa-solid fa-plus"></i>
+
+                                Add
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FOOD 4 -->
+
+                <article
+                    class="food-card"
+                    data-name="Masala Dosa"
+                    data-category="south-indian"
+                    data-diet="veg"
+                >
+
+                    <div class="food-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=700&q=80"
+                            alt="Masala Dosa"
+                        >
+
+
+                        <span class="food-badge">
+                            Healthy
+                        </span>
+
+
+                        <button
+                            class="wishlist-btn"
+                            aria-label="Add to wishlist"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card-content">
+
+                        <div class="food-top-row">
+
+                            <h3>
+                                Masala Dosa
+                            </h3>
+
+                            <span class="food-rating">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                4.8
+
+                            </span>
+
+                        </div>
+
+
+                        <p class="food-description">
+
+                            Crispy dosa filled with
+                            delicious potato masala,
+                            served with chutney.
+
+                        </p>
+
+
+                        <div class="food-bottom-row">
+
+                            <strong class="food-price">
+                                ₹99
+                            </strong>
+
+
+                            <button
+                                class="add-cart-btn"
+                                data-id="food-004"
+                                data-name="Masala Dosa"
+                                data-price="99"
+                            >
+
+                                <i class="fa-solid fa-plus"></i>
+
+                                Add
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FOOD 5 -->
+
+                <article
+                    class="food-card"
+                    data-name="Veg Fried Rice"
+                    data-category="chinese"
+                    data-diet="veg"
+                >
+
+                    <div class="food-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=700&q=80"
+                            alt="Veg Fried Rice"
+                        >
+
+
+                        <button
+                            class="wishlist-btn"
+                            aria-label="Add to wishlist"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card-content">
+
+                        <div class="food-top-row">
+
+                            <h3>
+                                Veg Fried Rice
+                            </h3>
+
+                            <span class="food-rating">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                4.5
+
+                            </span>
+
+                        </div>
+
+
+                        <p class="food-description">
+
+                            Fragrant rice stir-fried
+                            with fresh vegetables
+                            and Asian spices.
+
+                        </p>
+
+
+                        <div class="food-bottom-row">
+
+                            <strong class="food-price">
+                                ₹149
+                            </strong>
+
+
+                            <button
+                                class="add-cart-btn"
+                                data-id="food-005"
+                                data-name="Veg Fried Rice"
+                                data-price="149"
+                            >
+
+                                <i class="fa-solid fa-plus"></i>
+
+                                Add
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FOOD 6 -->
+
+                <article
+                    class="food-card"
+                    data-name="Paneer Butter Masala"
+                    data-category="biryani"
+                    data-diet="veg"
+                >
+
+                    <div class="food-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=700&q=80"
+                            alt="Paneer Butter Masala"
+                        >
+
+
+                        <span class="food-badge">
+                            Chef's Choice
+                        </span>
+
+
+                        <button
+                            class="wishlist-btn"
+                            aria-label="Add to wishlist"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card-content">
+
+                        <div class="food-top-row">
+
+                            <h3>
+                                Paneer Butter Masala
+                            </h3>
+
+                            <span class="food-rating">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                4.8
+
+                            </span>
+
+                        </div>
+
+
+                        <p class="food-description">
+
+                            Soft paneer cooked in a rich,
+                            creamy tomato gravy with
+                            aromatic spices.
+
+                        </p>
+
+
+                        <div class="food-bottom-row">
+
+                            <strong class="food-price">
+                                ₹189
+                            </strong>
+
+
+                            <button
+                                class="add-cart-btn"
+                                data-id="food-006"
+                                data-name="Paneer Butter Masala"
+                                data-price="189"
+                            >
+
+                                <i class="fa-solid fa-plus"></i>
+
+                                Add
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FOOD 7 -->
+
+                <article
+                    class="food-card"
+                    data-name="Chicken Noodles"
+                    data-category="chinese"
+                    data-diet="non-veg"
+                >
+
+                    <div class="food-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=700&q=80"
+                            alt="Chicken Noodles"
+                        >
+
+
+                        <button
+                            class="wishlist-btn"
+                            aria-label="Add to wishlist"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card-content">
+
+                        <div class="food-top-row">
+
+                            <h3>
+                                Chicken Noodles
+                            </h3>
+
+                            <span class="food-rating">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                4.6
+
+                            </span>
+
+                        </div>
+
+
+                        <p class="food-description">
+
+                            Stir-fried noodles with
+                            tender chicken and fresh
+                            crunchy vegetables.
+
+                        </p>
+
+
+                        <div class="food-bottom-row">
+
+                            <strong class="food-price">
+                                ₹179
+                            </strong>
+
+
+                            <button
+                                class="add-cart-btn"
+                                data-id="food-007"
+                                data-name="Chicken Noodles"
+                                data-price="179"
+                            >
+
+                                <i class="fa-solid fa-plus"></i>
+
+                                Add
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FOOD 8 -->
+
+                <article
+                    class="food-card"
+                    data-name="Veggie Burger"
+                    data-category="burger"
+                    data-diet="vegan"
+                >
+
+                    <div class="food-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=700&q=80"
+                            alt="Veggie Burger"
+                        >
+
+
+                        <span class="food-badge">
+                            Vegan
+                        </span>
+
+
+                        <button
+                            class="wishlist-btn"
+                            aria-label="Add to wishlist"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card-content">
+
+                        <div class="food-top-row">
+
+                            <h3>
+                                Veggie Burger
+                            </h3>
+
+                            <span class="food-rating">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                4.4
+
+                            </span>
+
+                        </div>
+
+
+                        <p class="food-description">
+
+                            Fresh vegetable patty with
+                            lettuce, tomato and a
+                            delicious vegan sauce.
+
+                        </p>
+
+
+                        <div class="food-bottom-row">
+
+                            <strong class="food-price">
+                                ₹159
+                            </strong>
+
+
+                            <button
+                                class="add-cart-btn"
+                                data-id="food-008"
+                                data-name="Veggie Burger"
+                                data-price="159"
+                            >
+
+                                <i class="fa-solid fa-plus"></i>
+
+                                Add
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FOOD 9 -->
+
+                <article
+                    class="food-card"
+                    data-name="Gulab Jamun"
+                    data-category="dessert"
+                    data-diet="veg"
+                >
+
+                    <div class="food-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1601303516534-2e4a4c6a6d5e?auto=format&fit=crop&w=700&q=80"
+                            alt="Gulab Jamun"
+                        >
+
+
+                        <span class="food-badge">
+                            Sweet
+                        </span>
+
+
+                        <button
+                            class="wishlist-btn"
+                            aria-label="Add to wishlist"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card-content">
+
+                        <div class="food-top-row">
+
+                            <h3>
+                                Gulab Jamun
+                            </h3>
+
+                            <span class="food-rating">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                4.8
+
+                            </span>
+
+                        </div>
+
+
+                        <p class="food-description">
+
+                            Soft and juicy milk-solid
+                            dumplings soaked in
+                            sweet sugar syrup.
+
+                        </p>
+
+
+                        <div class="food-bottom-row">
+
+                            <strong class="food-price">
+                                ₹89
+                            </strong>
+
+
+                            <button
+                                class="add-cart-btn"
+                                data-id="food-009"
+                                data-name="Gulab Jamun"
+                                data-price="89"
+                            >
+
+                                <i class="fa-solid fa-plus"></i>
+
+                                Add
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FOOD 10 -->
+
+                <article
+                    class="food-card"
+                    data-name="Farmhouse Pizza"
+                    data-category="pizza"
+                    data-diet="veg"
+                >
+
+                    <div class="food-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80"
+                            alt="Farmhouse Pizza"
+                        >
+
+
+                        <button
+                            class="wishlist-btn"
+                            aria-label="Add to wishlist"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card-content">
+
+                        <div class="food-top-row">
+
+                            <h3>
+                                Farmhouse Pizza
+                            </h3>
+
+                            <span class="food-rating">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                4.7
+
+                            </span>
+
+                        </div>
+
+
+                        <p class="food-description">
+
+                            Loaded with fresh vegetables,
+                            mozzarella cheese and
+                            Italian herbs.
+
+                        </p>
+
+
+                        <div class="food-bottom-row">
+
+                            <strong class="food-price">
+                                ₹299
+                            </strong>
+
+
+                            <button
+                                class="add-cart-btn"
+                                data-id="food-010"
+                                data-name="Farmhouse Pizza"
+                                data-price="299"
+                            >
+
+                                <i class="fa-solid fa-plus"></i>
+
+                                Add
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FOOD 11 -->
+
+                <article
+                    class="food-card"
+                    data-name="Idli Sambar"
+                    data-category="south-indian"
+                    data-diet="veg"
+                >
+
+                    <div class="food-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=700&q=80"
+                            alt="Idli Sambar"
+                        >
+
+
+                        <button
+                            class="wishlist-btn"
+                            aria-label="Add to wishlist"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card-content">
+
+                        <div class="food-top-row">
+
+                            <h3>
+                                Idli Sambar
+                            </h3>
+
+                            <span class="food-rating">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                4.7
+
+                            </span>
+
+                        </div>
+
+
+                        <p class="food-description">
+
+                            Soft steamed idlis served
+                            with hot sambar and
+                            fresh coconut chutney.
+
+                        </p>
+
+
+                        <div class="food-bottom-row">
+
+                            <strong class="food-price">
+                                ₹79
+                            </strong>
+
+
+                            <button
+                                class="add-cart-btn"
+                                data-id="food-011"
+                                data-name="Idli Sambar"
+                                data-price="79"
+                            >
+
+                                <i class="fa-solid fa-plus"></i>
+
+                                Add
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FOOD 12 -->
+
+                <article
+                    class="food-card"
+                    data-name="Chocolate Cake"
+                    data-category="dessert"
+                    data-diet="veg"
+                >
+
+                    <div class="food-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80"
+                            alt="Chocolate Cake"
+                        >
+
+
+                        <span class="food-badge">
+                            Special
+                        </span>
+
+
+                        <button
+                            class="wishlist-btn"
+                            aria-label="Add to wishlist"
+                        >
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="food-card-content">
+
+                        <div class="food-top-row">
+
+                            <h3>
+                                Chocolate Cake
+                            </h3>
+
+                            <span class="food-rating">
+
+                                <i class="fa-solid fa-star"></i>
+
+                                4.9
+
+                            </span>
+
+                        </div>
+
+
+                        <p class="food-description">
+
+                            Rich chocolate cake with
+                            creamy chocolate frosting
+                            and delicious toppings.
+
+                        </p>
+
+
+                        <div class="food-bottom-row">
+
+                            <strong class="food-price">
+                                ₹149
+                            </strong>
+
+
+                            <button
+                                class="add-cart-btn"
+                                data-id="food-012"
+                                data-name="Chocolate Cake"
+                                data-price="149"
+                            >
+
+                                <i class="fa-solid fa-plus"></i>
+
+                                Add
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- NO RESULTS -->
+
+            <div
+                id="noFoodResults"
+                class="no-food-results"
+            >
+
+                <div class="no-results-icon">
+
+                    <i class="fa-solid fa-utensils"></i>
+
+                </div>
+
+
+                <h3>
+                    No Food Found
+                </h3>
+
+
+                <p>
+                    Try another food name or change
+                    the filters.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="logo"
+                >
+
+                    <span class="logo-icon">
+                        <i class="fa-solid fa-utensils"></i>
+                    </span>
+
+                    <span>
+                        Fresh <b>Bite</b>
+                    </span>
+
+                </a>
+
+
+                <p>
+                    Delicious food delivered
+                    fresh to your doorstep.
+                </p>
+
+
+                <div class="social-links">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="restaurants.html">
+                    Restaurants
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Support
+                </h4>
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    FAQs
+                </a>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Contact
+                </h4>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Hyderabad, India
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 98765 43210
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    hello@freshbite.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Fresh Bite. All Rights Reserved.
+            </p>
+
+            <p>
+                Made with
+                <i class="fa-solid fa-heart"></i>
+                for food lovers.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="js/script.js"></script>
+
+<script src="js/menu.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Fresh Bite - Checkout</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="css/checkout.css">
+
+</head>
+
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="checkout-header">
+
+    <div class="header-container">
+
+        <a href="index.html"
+           class="logo">
+
+            <span class="logo-icon">
+                <i class="fa-solid fa-utensils"></i>
+            </span>
+
+            <span>Fresh Bite</span>
+
+        </a>
+
+
+        <div class="checkout-title">
+
+            <i class="fa-solid fa-lock"></i>
+
+            Secure Checkout
+
+        </div>
+
+
+        <a href="cart.html"
+           class="back-cart">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            Back to Cart
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="checkout-page">
+
+    <div class="checkout-container">
+
+
+        <!-- PAGE HEADING -->
+
+        <div class="page-heading">
+
+            <span>
+                <i class="fa-solid fa-bag-shopping"></i>
+                Fresh Bite
+            </span>
+
+            <h1>
+                Complete Your Order
+            </h1>
+
+            <p>
+                Enter your delivery details and choose your payment method.
+            </p>
+
+        </div>
+
+
+        <!-- CHECKOUT LAYOUT -->
+
+        <div class="checkout-layout">
+
+
+            <!-- ================= LEFT ================= -->
+
+            <div class="checkout-left">
+
+
+                <!-- DELIVERY ADDRESS -->
+
+                <section class="checkout-card">
+
+                    <div class="card-heading">
+
+                        <div class="heading-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Delivery Address
+                            </h2>
+
+                            <p>
+                                Where should we deliver your food?
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label>
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                placeholder="Enter your name">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="10-digit mobile number"
+                                maxlength="10">
+
+                        </div>
+
+
+                        <div class="form-group full-width">
+
+                            <label>
+                                Address
+                            </label>
+
+                            <textarea
+                                id="address"
+                                placeholder="House number, street, area"></textarea>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                City
+                            </label>
+
+                            <input
+                                type="text"
+                                id="city"
+                                placeholder="City">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Pincode
+                            </label>
+
+                            <input
+                                type="text"
+                                id="pincode"
+                                placeholder="6-digit pincode"
+                                maxlength="6">
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- DELIVERY TIME -->
+
+                <section class="checkout-card">
+
+                    <div class="card-heading">
+
+                        <div class="heading-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Delivery Time
+                            </h2>
+
+                            <p>
+                                Select when you want your order.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="delivery-options">
+
+                        <label class="delivery-option">
+
+                            <input
+                                type="radio"
+                                name="deliveryTime"
+                                value="ASAP"
+                                checked>
+
+                            <span class="radio-box"></span>
+
+                            <div>
+
+                                <strong>
+                                    Deliver ASAP
+                                </strong>
+
+                                <small>
+                                    30–45 minutes
+                                </small>
+
+                            </div>
+
+                        </label>
+
+
+                        <label class="delivery-option">
+
+                            <input
+                                type="radio"
+                                name="deliveryTime"
+                                value="45-60 minutes">
+
+                            <span class="radio-box"></span>
+
+                            <div>
+
+                                <strong>
+                                    Within 45–60 minutes
+                                </strong>
+
+                                <small>
+                                    Standard delivery
+                                </small>
+
+                            </div>
+
+                        </label>
+
+
+                        <label class="delivery-option">
+
+                            <input
+                                type="radio"
+                                name="deliveryTime"
+                                value="1-2 hours">
+
+                            <span class="radio-box"></span>
+
+                            <div>
+
+                                <strong>
+                                    Within 1–2 hours
+                                </strong>
+
+                                <small>
+                                    Flexible delivery
+                                </small>
+
+                            </div>
+
+                        </label>
+
+                    </div>
+
+                </section>
+
+
+                <!-- PAYMENT -->
+
+                <section class="checkout-card">
+
+                    <div class="card-heading">
+
+                        <div class="heading-icon">
+                            <i class="fa-solid fa-credit-card"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Payment Method
+                            </h2>
+
+                            <p>
+                                Choose your preferred payment option.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="payment-options">
+
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="Cash on Delivery"
+                                checked>
+
+                            <span class="payment-icon">
+                                <i class="fa-solid fa-money-bill-wave"></i>
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Cash on Delivery
+                                </strong>
+
+                                <small>
+                                    Pay when your food arrives.
+                                </small>
+
+                            </div>
+
+                        </label>
+
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="UPI">
+
+                            <span class="payment-icon">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    UPI
+                                </strong>
+
+                                <small>
+                                    Google Pay, PhonePe, Paytm
+                                </small>
+
+                            </div>
+
+                        </label>
+
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="Card">
+
+                            <span class="payment-icon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Credit / Debit Card
+                                </strong>
+
+                                <small>
+                                    Secure card payment simulation.
+                                </small>
+
+                            </div>
+
+                        </label>
+
+                    </div>
+
+                </section>
+
+
+                <!-- COUPON -->
+
+                <section class="checkout-card">
+
+                    <div class="card-heading">
+
+                        <div class="heading-icon">
+                            <i class="fa-solid fa-ticket"></i>
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Coupon Code
+                            </h2>
+
+                            <p>
+                                Apply a special offer to your order.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="coupon-box">
+
+                        <input
+                            type="text"
+                            id="couponInput"
+                            placeholder="Enter coupon code">
+
+                        <button
+                            id="applyCoupon">
+
+                            Apply
+
+                        </button>
+
+                    </div>
+
+
+                    <p
+                        id="couponMessage"
+                        class="coupon-message">
+                    </p>
+
+                    <div class="coupon-hint">
+
+                        Try:
+                        <strong>FRESH10</strong>
+
+                        for 10% off
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- ================= RIGHT ================= -->
+
+            <aside class="checkout-right">
+
+
+                <!-- ORDER SUMMARY -->
+
+                <section class="summary-card">
+
+                    <div class="summary-heading">
+
+                        <h2>
+                            Your Order
+                        </h2>
+
+                        <span id="itemCount">
+                            0 items
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="checkoutItems"
+                        class="checkout-items">
+
+                    </div>
+
+
+                    <div class="summary-divider"></div>
+
+
+                    <div class="price-row">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <strong id="subtotal">
+                            ₹0.00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="price-row">
+
+                        <span>
+                            Delivery Fee
+                        </span>
+
+                        <strong id="deliveryFee">
+                            ₹40.00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="price-row discount-row">
+
+                        <span>
+                            Discount
+                        </span>
+
+                        <strong id="discount">
+                            -₹0.00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-divider"></div>
+
+
+                    <div class="total-row">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="grandTotal">
+                            ₹0.00
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        id="placeOrderBtn"
+                        class="place-order-btn">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        Place Order
+
+                    </button>
+
+
+                    <p class="secure-text">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        Your order information is secure.
+
+                    </p>
+
+                </section>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- ================= SUCCESS MODAL ================= -->
+
+<div
+    id="successModal"
+    class="success-modal">
+
+    <div class="success-box">
+
+        <div class="success-icon">
+
+            <i class="fa-solid fa-check"></i>
+
+        </div>
+
+        <h2>
+            Order Placed Successfully!
+        </h2>
+
+        <p>
+            Thank you for ordering from Fresh Bite.
+        </p>
+
+        <div class="order-number">
+
+            Order ID:
+            <strong id="successOrderId">
+                FB-000000
+            </strong>
+
+        </div>
+
+        <button
+            id="trackOrderBtn">
+
+            Track My Order
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="js/checkout.js"></script>
+
+</body>
+
+</html>

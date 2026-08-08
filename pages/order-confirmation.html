@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Confirmed - FreshBite</title>
+
+    <link rel="stylesheet" href="order-confirmation.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            Fresh<span>Bite</span>
+        </div>
+
+        <a href="index.html" class="home-btn">
+            Home
+        </a>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="confirmation-container">
+
+        <!-- SUCCESS -->
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h1>Order Placed Successfully!</h1>
+
+        <p class="success-message">
+            Thank you for ordering with FreshBite.
+            Your food is being prepared.
+        </p>
+
+
+        <!-- ORDER DETAILS -->
+
+        <div class="order-card">
+
+            <div class="order-header">
+
+                <div>
+                    <span class="label">
+                        Order ID
+                    </span>
+
+                    <strong id="orderId">
+                        --
+                    </strong>
+                </div>
+
+                <div class="status">
+                    Order Placed
+                </div>
+
+            </div>
+
+
+            <hr>
+
+
+            <!-- CUSTOMER -->
+
+            <div class="section">
+
+                <h2>Delivery Details</h2>
+
+                <p>
+                    <strong>Name:</strong>
+                    <span id="customerName">--</span>
+                </p>
+
+                <p>
+                    <strong>Mobile:</strong>
+                    <span id="customerMobile">--</span>
+                </p>
+
+                <p>
+                    <strong>Address:</strong>
+                    <span id="customerAddress">--</span>
+                </p>
+
+            </div>
+
+
+            <hr>
+
+
+            <!-- ITEMS -->
+
+            <div class="section">
+
+                <h2>Ordered Items</h2>
+
+                <div id="orderedItems"></div>
+
+            </div>
+
+
+            <hr>
+
+
+            <!-- PAYMENT -->
+
+            <div class="section">
+
+                <h2>Payment Details</h2>
+
+                <p>
+                    <strong>Payment Method:</strong>
+                    <span id="paymentMethod">--</span>
+                </p>
+
+                <p>
+                    <strong>Item Total:</strong>
+                    <span id="itemTotal">₹0</span>
+                </p>
+
+                <p>
+                    <strong>Delivery Fee:</strong>
+                    <span id="deliveryFee">₹0</span>
+                </p>
+
+                <p>
+                    <strong>Discount:</strong>
+                    <span id="discount">₹0</span>
+                </p>
+
+            </div>
+
+
+            <hr>
+
+
+            <!-- TOTAL -->
+
+            <div class="total-row">
+
+                <span>
+                    Total Paid
+                </span>
+
+                <strong id="grandTotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <div class="action-buttons">
+
+            <button
+                onclick="continueShopping()"
+                class="primary-btn"
+            >
+                Continue Shopping
+            </button>
+
+            <button
+                onclick="viewOrder()"
+                class="secondary-btn"
+            >
+                View Order
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script src="order-confirmation.js"></script>
+
+</body>
+</html>
