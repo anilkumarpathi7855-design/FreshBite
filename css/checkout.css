@@ -1,0 +1,1193 @@
+/* =====================================================
+   FRESH BITE - CHECKOUT CSS
+===================================================== */
+
+:root {
+    --orange: #FF6B35;
+    --orange-dark: #e95725;
+    --cream: #FFF8F0;
+    --dark-brown: #2D1B12;
+    --brown: #5A3A2E;
+    --light-brown: #8B6F61;
+    --white: #ffffff;
+    --border: #eadfd7;
+    --light-bg: #fffaf6;
+    --green: #2e8b57;
+    --red: #d64545;
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--cream);
+    color: var(--dark-brown);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.checkout-header {
+    height: 72px;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+.header-container {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--dark-brown);
+    text-decoration: none;
+
+    font-family: "Baloo 2", cursive;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: var(--orange);
+    color: white;
+}
+
+
+.checkout-title {
+    color: var(--brown);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.checkout-title i {
+    margin-right: 6px;
+    color: var(--green);
+}
+
+
+.back-cart {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: var(--orange);
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.back-cart:hover {
+    color: var(--orange-dark);
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.checkout-page {
+    padding: 50px 20px 80px;
+}
+
+
+.checkout-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =====================================================
+   PAGE HEADING
+===================================================== */
+
+.page-heading {
+    margin-bottom: 32px;
+}
+
+
+.page-heading > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: var(--orange);
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.page-heading h1 {
+    margin-top: 5px;
+
+    font-family: "Baloo 2", cursive;
+    font-size: 40px;
+    line-height: 1.1;
+}
+
+
+.page-heading p {
+    margin-top: 7px;
+
+    color: var(--light-brown);
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   CHECKOUT LAYOUT
+===================================================== */
+
+.checkout-layout {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 380px;
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+
+.checkout-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* =====================================================
+   CHECKOUT CARD
+===================================================== */
+
+.checkout-card {
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 17px;
+}
+
+
+.card-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    margin-bottom: 23px;
+
+    padding-bottom: 17px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.heading-icon {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    background: #fff0e8;
+
+    color: var(--orange);
+}
+
+
+.card-heading h2 {
+    font-family: "Baloo 2", cursive;
+    font-size: 24px;
+}
+
+
+.card-heading p {
+    margin-top: 2px;
+
+    color: var(--light-brown);
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+
+.form-group label {
+    margin-bottom: 6px;
+
+    color: var(--brown);
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #fffdfb;
+
+    color: var(--dark-brown);
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    transition: 0.2s ease;
+}
+
+
+.form-group textarea {
+    min-height: 90px;
+
+    resize: vertical;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--orange);
+
+    background: white;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #b7a49b;
+}
+
+
+/* =====================================================
+   DELIVERY OPTIONS
+===================================================== */
+
+.delivery-options {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+
+.delivery-option {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 11px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.delivery-option:hover {
+    border-color: var(--orange);
+
+    background: #fff8f3;
+}
+
+
+.delivery-option input {
+    position: absolute;
+
+    opacity: 0;
+}
+
+
+.radio-box {
+    width: 17px;
+    height: 17px;
+
+    flex-shrink: 0;
+
+    border: 2px solid #d5c5bd;
+
+    border-radius: 50%;
+}
+
+
+.delivery-option input:checked + .radio-box {
+    border: 5px solid var(--orange);
+}
+
+
+.delivery-option strong {
+    display: block;
+
+    color: var(--dark-brown);
+
+    font-size: 10px;
+}
+
+
+.delivery-option small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--light-brown);
+
+    font-size: 8px;
+}
+
+
+/* =====================================================
+   PAYMENT
+===================================================== */
+
+.payment-options {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.payment-option {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 11px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.payment-option:hover {
+    border-color: var(--orange);
+
+    background: #fff8f3;
+}
+
+
+.payment-option input {
+    position: absolute;
+
+    opacity: 0;
+}
+
+
+.payment-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #fff0e8;
+
+    color: var(--orange);
+
+    font-size: 15px;
+}
+
+
+.payment-option strong {
+    display: block;
+
+    font-size: 11px;
+}
+
+
+.payment-option small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--light-brown);
+
+    font-size: 9px;
+}
+
+
+.payment-option:has(input:checked) {
+    border-color: var(--orange);
+
+    background: #fff8f3;
+}
+
+
+/* =====================================================
+   COUPON
+===================================================== */
+
+.coupon-box {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.coupon-box input {
+    flex: 1;
+
+    padding: 12px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 11px;
+}
+
+
+.coupon-box input:focus {
+    border-color: var(--orange);
+}
+
+
+.coupon-box button {
+    padding: 0 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: var(--orange);
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.coupon-box button:hover {
+    background: var(--orange-dark);
+}
+
+
+.coupon-message {
+    min-height: 17px;
+
+    margin-top: 7px;
+
+    font-size: 9px;
+}
+
+
+.coupon-message.success {
+    color: var(--green);
+}
+
+
+.coupon-message.error {
+    color: var(--red);
+}
+
+
+.coupon-hint {
+    color: var(--light-brown);
+
+    font-size: 9px;
+}
+
+
+.coupon-hint strong {
+    color: var(--orange);
+}
+
+
+/* =====================================================
+   RIGHT SUMMARY
+===================================================== */
+
+.checkout-right {
+    position: sticky;
+
+    top: 95px;
+}
+
+
+.summary-card {
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 17px;
+
+    box-shadow: 0 10px 30px rgba(45, 27, 18, 0.05);
+}
+
+
+.summary-heading {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom: 17px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.summary-heading h2 {
+    font-family: "Baloo 2", cursive;
+
+    font-size: 24px;
+}
+
+
+.summary-heading span {
+    padding: 5px 8px;
+
+    border-radius: 20px;
+
+    background: #fff0e8;
+
+    color: var(--orange);
+
+    font-size: 8px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   ITEMS
+===================================================== */
+
+.checkout-items {
+    max-height: 330px;
+
+    overflow-y: auto;
+
+    padding: 15px 0;
+}
+
+
+.checkout-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #f1e8e3;
+}
+
+
+.checkout-item:last-child {
+    border-bottom: none;
+}
+
+
+.checkout-item-image {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 9px;
+
+    background: #f4e8df;
+}
+
+
+.checkout-item-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.checkout-item-info {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.checkout-item-name {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: var(--dark-brown);
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+.checkout-item-qty {
+    margin-top: 3px;
+
+    color: var(--light-brown);
+
+    font-size: 8px;
+}
+
+
+.checkout-item-price {
+    color: var(--dark-brown);
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   EMPTY CART
+===================================================== */
+
+.empty-checkout {
+    padding: 35px 10px;
+
+    text-align: center;
+}
+
+
+.empty-checkout i {
+    margin-bottom: 10px;
+
+    color: #e4d3c8;
+
+    font-size: 35px;
+}
+
+
+.empty-checkout h3 {
+    font-family: "Baloo 2", cursive;
+
+    font-size: 20px;
+}
+
+
+.empty-checkout p {
+    margin-top: 4px;
+
+    color: var(--light-brown);
+
+    font-size: 9px;
+}
+
+
+.empty-checkout a {
+    display: inline-block;
+
+    margin-top: 13px;
+
+    padding: 9px 15px;
+
+    border-radius: 7px;
+
+    background: var(--orange);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   SUMMARY
+===================================================== */
+
+.summary-divider {
+    height: 1px;
+
+    margin: 12px 0;
+
+    background: var(--border);
+}
+
+
+.price-row {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin: 10px 0;
+
+    color: var(--brown);
+
+    font-size: 10px;
+}
+
+
+.price-row strong {
+    color: var(--dark-brown);
+}
+
+
+.discount-row strong {
+    color: var(--green);
+}
+
+
+.total-row {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 16px;
+}
+
+
+.total-row span {
+    font-family: "Baloo 2", cursive;
+
+    font-size: 20px;
+}
+
+
+.total-row strong {
+    color: var(--orange);
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 23px;
+}
+
+
+/* =====================================================
+   PLACE ORDER
+===================================================== */
+
+.place-order-btn {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: var(--orange);
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.place-order-btn:hover {
+    background: var(--orange-dark);
+
+    transform: translateY(-1px);
+}
+
+
+.place-order-btn:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+.secure-text {
+    margin-top: 12px;
+
+    text-align: center;
+
+    color: var(--light-brown);
+
+    font-size: 8px;
+}
+
+
+.secure-text i {
+    margin-right: 3px;
+
+    color: var(--green);
+}
+
+
+/* =====================================================
+   SUCCESS MODAL
+===================================================== */
+
+.success-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(45, 27, 18, 0.65);
+}
+
+
+.success-modal.show {
+    display: flex;
+}
+
+
+.success-box {
+    width: 100%;
+
+    max-width: 430px;
+
+    padding: 40px 30px;
+
+    border-radius: 20px;
+
+    background: white;
+
+    text-align: center;
+
+    animation: modalPop 0.25s ease;
+}
+
+
+@keyframes modalPop {
+
+    from {
+        opacity: 0;
+
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+
+}
+
+
+.success-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e8f7ee;
+
+    color: var(--green);
+
+    font-size: 30px;
+}
+
+
+.success-box h2 {
+    font-family: "Baloo 2", cursive;
+
+    font-size: 27px;
+}
+
+
+.success-box p {
+    margin-top: 5px;
+
+    color: var(--light-brown);
+
+    font-size: 11px;
+}
+
+
+.order-number {
+    margin: 20px 0;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    background: var(--light-bg);
+
+    color: var(--brown);
+
+    font-size: 10px;
+}
+
+
+.order-number strong {
+    color: var(--orange);
+}
+
+
+#trackOrderBtn {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: var(--orange);
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .checkout-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    .checkout-right {
+        position: static;
+    }
+
+
+    .summary-card {
+        max-width: none;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .checkout-header {
+        height: 65px;
+    }
+
+
+    .header-container {
+        padding: 0 15px;
+    }
+
+
+    .checkout-title {
+        display: none;
+    }
+
+
+    .logo {
+        font-size: 21px;
+    }
+
+
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+
+    .checkout-page {
+        padding: 30px 12px 50px;
+    }
+
+
+    .page-heading h1 {
+        font-size: 32px;
+    }
+
+
+    .checkout-card {
+        padding: 18px;
+    }
+
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-group.full-width {
+        grid-column: auto;
+    }
+
+
+    .delivery-options {
+        grid-template-columns: 1fr;
+    }
+
+
+    .coupon-box {
+        flex-direction: column;
+    }
+
+
+    .coupon-box button {
+        padding: 11px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .back-cart {
+        font-size: 0;
+    }
+
+
+    .back-cart i {
+        font-size: 16px;
+    }
+
+
+    .page-heading h1 {
+        font-size: 28px;
+    }
+
+
+    .card-heading h2 {
+        font-size: 21px;
+    }
+
+
+    .summary-card {
+        padding: 18px;
+    }
+
+}
